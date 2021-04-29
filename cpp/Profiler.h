@@ -5,11 +5,12 @@
 
 class Profiler {
 public:
-    explicit Profiler(const char* pName = "Unknow");
+    explicit Profiler(
+        const char* pName = "Unknow");
     ~Profiler();
 private:
-    Profiler(const Profiler& rhs) = delete;
-    Profiler& operator=(const Profiler&& rhs) = delete;
+    Profiler(const Profiler& rhs)               = delete;
+    Profiler& operator=(const Profiler&& rhs)   = delete;
     typedef std::chrono::high_resolution_clock clock;
     typedef std::chrono::microseconds res;
 
